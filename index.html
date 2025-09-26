@@ -18,9 +18,10 @@
         <div class="fl">
             <h1 class="fl-text">website here</h1>
         </div>
-        <div class="fi">
-            <a href="https://github.com/rye317"><img class="fi-image" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"></a>
-        </div>
+        <a onclick="switchcolormode()"><div id="fi" class="fi">
+            <img id="fi-image1" class="fi-image1" src="https://cdn-icons-png.flaticon.com/512/153/153786.png">
+            <img id="fi-image2" class="fi-image2" src="https://static.thenounproject.com/png/1448361-200.png">
+        </div></a>
         <div id="light" class="light"></div>
     </head>
 
@@ -78,6 +79,25 @@
 
     <script>
 
+    var light = false;
+
+    function switchcolormode() {
+        var fi = document.getElementById("fi");
+        var fiimage1 = document.getElementById("fi-image1");
+        var fiimage2 = document.getElementById("fi-image2");
+        if (light) {
+            fi.style.filter = "none";
+            fiimage2.style.filter = "invert(100%)";
+            fiimage1.style.filter = "none";
+            light = false;
+        } else {
+            fi.style.filter = "invert(100%)";
+            fiimage2.style.filter = "none";
+            fiimage1.style.filter = "invert(100%)";
+            light = true;
+        }
+    }
+
     document.addEventListener('mousemove', function(mouse) {
         var light = document.getElementById("light");
         var left = event.clientX - (light.offsetWidth/2);
@@ -126,6 +146,76 @@
         }
     }, 1000)
 
+    function randcolor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // var root = document.documentElement;
+    // setInterval(() => {
+    //     const newcolor = randcolor();
+    //     console.log(newcolor);
+    //     root.style.setProperty('--color', newcolor);
+    // }, 5000)
+
+    const gradient = document.getElementById("light");
+
+    function spotlight() {
+        const startcolor = gradient.style.getPropertyValue("--color");
+        const endcolor = randcolor()
+
+        let startTime = null;
+        const duration = 5000;
+
+        function step(currentTime) {
+            if (startTime === null) {
+            startTime = currentTime;
+            }
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            const newcolor = interpolateColor(startcolor, endcolor, progress);
+            gradient.style.setProperty("--color", newcolor);
+
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            } else {
+                setTimeout(spotlight, 5000); 
+            }
+        }
+        requestAnimationFrame(step);
+    }
+
+    function interpolateColor(color1, color2, factor) {
+        const hexToRgb = (hex) => {
+            const bigint = parseInt(hex.slice(1), 16);
+            const r = (bigint >> 16) & 255;
+            const g = (bigint >> 8) & 255;
+            const b = bigint & 255;
+            return [r, g, b];
+        };
+
+        const rgbToHex = (r, g, b) => {
+            const toHex = (c) => Math.round(c).toString(16).padStart(2, '0');
+            return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+        };
+
+        const c1 = hexToRgb(color1);
+        const c2 = hexToRgb(color2);
+
+        const r = c1[0] + (c2[0] - c1[0]) * factor;
+        const g = c1[1] + (c2[1] - c1[1]) * factor;
+        const b = c1[2] + (c2[2] - c1[2]) * factor;
+
+        return rgbToHex(r, g, b);
+    }
+
+    spotlight();
+
     </script>
 
     <style>
@@ -162,22 +252,38 @@
 
     .fi {
         position: fixed;
+        display: flex;
+        gap: 15px;
         top: 15px;
         right: 15px;
         background-color: black;
         padding: 7px;
         justify-content: center;
         align-items: center;
-        border-radius: 1em;
+        border-radius: 5em;
+        width: 120px;
+        height: 50px;
+        cursor: pointer;
+        transition: filter 0.5s;
     }
 
-    .fi-image {
-        width: 3.5em;
+    .fi-image1 {
+        width: 35px;
+        left: 0;
+        transition: filter 0.5s;
+    }
+
+    .fi-image2 {
+        width: 45px;
+        right: 0;
+        filter: invert(100%);
+        transition: filter 0.5s;
     }
 
     .light {
+        --color: rgb(158, 135, 173, .85);
         background-color: transparent;
-        background: radial-gradient(rgb(158, 135, 173, .85) 0%, transparent 70%);
+        background: radial-gradient(var(--color) 0%, transparent 70%);
         width: 1000px;
         height: 1000px;
         position: fixed;
