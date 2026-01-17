@@ -16,7 +16,7 @@
             <div class="banner2"></div>
         </div> -->
         <div class="fl">
-            <h1 class="fl-text">website here</h1>
+            <h1 class="fl-text">ryeqt<br>.dev</h1>
         </div>
         <a onclick="switchcolormode()"><div id="fi" class="fi">
             <img id="fi-image1" class="fi-image1" src="https://cdn-icons-png.flaticon.com/512/153/153786.png">
@@ -27,15 +27,16 @@
 
     <body>
         <div class="group" id="banner">
+            <h1 class="second" id="second">|</h1>
             <h1 class="head" id="head"></h1><h1 class="blinking" id="blinking">|</h1>
         </div>
-        <h1 class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet, turpis non vehicula ornare, urna lectus finibus dui, fermentum porttitor tellus tortor vel neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum eu eros purus. Phasellus </h1>
+        <h1 class="desc" id="desc"><b>Hello!</b> I am an experienced developer with years of general experience; this includes luau as well as a variety of other languages. I have programmed a variety of systems in roblox, and am always willing to grow with new, unique projects!<br><br>I am still a novice at roblox development, and currently, I am aiming to grow my portfolio.</h1>
         <div class="down-div">
             <div id="down-img-div" class="down-img-div">
                 <img src="https://cdn-icons-png.freepik.com/512/2989/2989989.png" class="down-img"></img>
             </div>
         </div>
-        <div class="about-div">
+        <!-- <div class="about-div">
             <br id="about" class="separator">
             <div class="about-div-2">
                 <h1 class="header-about">about</h1>
@@ -43,7 +44,7 @@
             <div class="about-div-3">
                 <h1 class="about1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet, turpis non vehicula ornare, urna lectus finibus dui, fermentum porttitor tellus tortor vel neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum eu eros purus.</h1>
             </div>
-        </div>
+        </div> -->
         <div class="experience-div">
             <br id="experience" class="separator">
             <div class="experience-div-2">
@@ -52,8 +53,19 @@
             <div class="experience-div-3">
                 <h1 class="experience1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet, turpis non vehicula ornare, urna lectus finibus dui, fermentum porttitor tellus tortor vel neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum eu eros purus.</h1>
             </div>
+            <br id="experience" class="separator">
+            <div class="experience-boxes">
+                <div class="box-1"></div>
+                <div class="box-1"></div>
+                <div class="box-1"></div>
+                <div class="box-1"></div>
+                <div class="box-1"></div>
+                <div class="box-1"></div>
+                <div class="box-1"></div>
+                <div class="box-1"></div>
+            </div>
         </div>
-        <div class="certificates-div">
+        <!-- <div class="certificates-div">
             <br id="certificates" class="separator">
             <div class="certificates-div-2">
                 <h1 class="header-certificates">certificates</h1>
@@ -61,7 +73,7 @@
             <div class="certificates-div-3">
                 <h1 class="certificates1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet, turpis non vehicula ornare, urna lectus finibus dui, fermentum porttitor tellus tortor vel neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum eu eros purus.</h1>
             </div>
-        </div>
+        </div> -->
     </body>
 
     <footer>
@@ -70,30 +82,33 @@
             <h1 class="info-h1">get in touch with me</h1>
             <div class="info-img-div">
                 <a href="https://github.com/rye317"><img class="info-img" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"></a>
-                <a href="https://github.com/rye317"><img class="info-img" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"></a>
-                <a href="https://github.com/rye317"><img class="info-img" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"></a>
+                <a href="https://github.com/rye317"><img class="info-img-2" src="https://shared-files.whatpulse.org/app_logos/discord.png"></a>
+                <h1 class="info-img-2-text">@huckfil</h1>
             </div>
-            <h2 class="info-h2">testing © 1642</h2>
+            <h2 class="info-h2"></h2>
         </div>
     </footer>
 
     <script>
 
-    var light = false;
+    var light = true;
 
     function switchcolormode() {
         var fi = document.getElementById("fi");
         var fiimage1 = document.getElementById("fi-image1");
         var fiimage2 = document.getElementById("fi-image2");
+        var spotlight = document.getElementById("light");
         if (light) {
             fi.style.filter = "none";
             fiimage2.style.filter = "invert(100%)";
             fiimage1.style.filter = "none";
+            spotlight.style.opacity = 0;
             light = false;
         } else {
             fi.style.filter = "invert(100%)";
             fiimage2.style.filter = "none";
             fiimage1.style.filter = "invert(100%)";
+            spotlight.style.opacity = .5;
             light = true;
         }
     }
@@ -112,31 +127,89 @@
         }
     })
 
-    var text = "website here";
+
+    console.log(blink);
+
+    var text = "ryeqt";
 
     console.log("test");
 
+    var shouldgodown = true;
+
     function downarrowbounce() {
-        console.log("working 1");
-        var downarrowdiv = document.getElementById("down-img-div");
-        downarrowdiv.style.marginTop = "1em";
-        setTimeout(() => {
-            downarrowdiv.style.marginTop = "0em";
-        }, 1500)
+        if (shouldgodown) {
+            var downarrowdiv = document.getElementById("down-img-div");
+            downarrowdiv.style.marginTop = "1em";
+            setTimeout(() => {
+                downarrowdiv.style.marginTop = "0em";
+            }, 1500)
+        }
     }
 
     const downarrowbounceInterval = setInterval(downarrowbounce, 3000);
 
+    var shouldblink = true;
+
     function blink() {
-        var blinking = document.getElementById("blinking");
-        if (blinking.style.visibility == "visible") {
-            blinking.style.visibility = "hidden";
-        } else {
-            blinking.style.visibility = "visible";
+        if (shouldblink) {
+            var blinking = document.getElementById("blinking");
+            if (blinking.style.visibility == "visible") {
+                blinking.style.visibility = "hidden";
+            } else {
+                blinking.style.visibility = "visible";
+            }
         }
     }
 
     const blinkingInterval = setInterval(blink, 500);
+
+    // document.getElementById('blinking').addEventListener('click', function() {
+    //     shouldblink = false;
+    //     shouldgodown = false;
+    //     blinking.style.visibility = "visible";
+    //     document.getElementById('head').style.opacity = 0;
+    //     document.getElementById('desc').style.opacity = 0;
+    //     var down = document.getElementById("down-img-div")
+    //     down.style.position = 'absolute';
+    //     var left = screen.width/2;
+    //     down.style.left = left;
+    //     var bottom = 35;
+    //     down.style.bottom = bottom
+    //     var dirv = 1;
+    //     var dirh = 1;
+    //     var increase = 5;
+    //     function move() {
+    //         if (dirv == 1) {
+    //             bottom += increase;
+    //         } else {
+    //             bottom -= increase;
+    //         }
+    //         if (dirh == 1) {
+    //             left += increase;
+    //         } else {
+    //             left -= increase;
+    //         }
+    //         down.style.left = left;
+    //         down.style.bottom = bottom;
+    //         setTimeout(move,100);
+    //     }
+    //     setTimeout(move,100);
+    // });
+
+    // document.addEventListener("keydown", function(event) {
+    //     var blinking = document.getElementById('blinking');
+    //     blinking.style.position = 'absolute';
+    //     var left = 1075;
+    //     blinking.style.left = left;
+    //     var bottom = 385;
+    //     blinking.style.bottom = bottom;
+    //     var increase = 5;
+    //     if (event.key === "ArrowDown") {
+    //         event.preventDefault();
+    //         bottom -= increase;
+    //         blinking.style.bottom = bottom;
+    //     }
+    // });
 
     setTimeout(() => {
         for (let i = 1; i < text.length+1; i++) {
@@ -154,13 +227,6 @@
         }
         return color;
     }
-
-    // var root = document.documentElement;
-    // setInterval(() => {
-    //     const newcolor = randcolor();
-    //     console.log(newcolor);
-    //     root.style.setProperty('--color', newcolor);
-    // }, 5000)
 
     const gradient = document.getElementById("light");
 
@@ -228,6 +294,23 @@
         scrollbar-width: none;
     }
 
+    .head {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .desc {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .second {
+        font-size: 140px;
+        position: absolute;
+        left: 10;
+        opacity: 0;
+    }
+
     html {
         background-color: black;
     }
@@ -244,6 +327,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 1em;
+        box-shadow: 0 0 0 5px rgb(0,0,0,.05);
     }
 
     .fl-text {
@@ -264,19 +348,21 @@
         width: 120px;
         height: 50px;
         cursor: pointer;
+        filter: invert(100%);
         transition: filter 0.5s;
     }
 
     .fi-image1 {
         width: 35px;
         left: 0;
+        filter: invert(100%);
         transition: filter 0.5s;
     }
 
     .fi-image2 {
         width: 45px;
         right: 0;
-        filter: invert(100%);
+        /* filter: invert(100%); */
         transition: filter 0.5s;
     }
 
@@ -288,7 +374,8 @@
         height: 1000px;
         position: fixed;
         z-index: -1;
-        transition: left 0.5s ease-out, top 0.5s ease-out;
+        opacity: .5;
+        transition: left 0.5s ease-out, top 0.5s ease-out, opacity 0.5s;
         filter: blur(40px);
     }
 
@@ -331,6 +418,21 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .experience-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3.5em;
+        max-width: 50em;
+        justify-content: center;
+    }
+
+    .box-1 {
+        width: 10em;
+        height: 10em;
+        background-color: white;
+        border-radius: 1em;
     }
 
     .experience1 {
@@ -410,10 +512,26 @@
         color: gray;
     }
 
+    .info-img-div {
+        display: flex;
+        gap: 0.5em;
+        justify-content: center;
+        align-items: center;
+    }
+
     .info-img {
-        width: 2.5em;
-        height: 2.5em;
-        margin-right: 15px;
+        max-width: 2.5em;
+        margin-right: 1em;
+    }
+
+    .info-img-2 {
+        max-width: 2.5em;
+    }
+
+    .info-img-2-text {
+        font-size: 20;
+        color: #94A8FF;
+        background-color: #23274B;
     }
 
     body {
