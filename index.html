@@ -1,6 +1,9 @@
+<!DOCTYPE html>
 <html>
-
     <head>
+        <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         <!-- <div class="bannerdiv">
             <div class="innerdiv">
                 <div class="banner">
@@ -15,8 +18,16 @@
             </div>
             <div class="banner2"></div>
         </div> -->
-        <div class="fl">
-            <h1 class="fl-text">ryeqt<br>.dev</h1>
+        <div class="fl-div">
+            <a class="fl-a" href="#banner"><div class="fl" id="fl-1">
+                <h1 class="fl-text" id="fl-text-1">ryeqt</h1>
+            </div></a>
+            <a class="fl-a" href="#pastprojects"><div class="fl" id="fl-2">
+                <h1 class="fl-text-hashtag" id="fl-text-hashtag-2">#</h1><h1 class="fl-text" id="fl-text-2">past projects</h1>
+            </div></a>
+            <a class="fl-a" href="#contact"><div class="fl" id="fl-3">
+                <h1 class="fl-text-hashtag" id="fl-text-hashtag-3">#</h1><h1 class="fl-text" id="fl-text-3">contact me</h1>
+            </div></a>
         </div>
         <a onclick="switchcolormode()"><div id="fi" class="fi">
             <img id="fi-image1" class="fi-image1" src="https://cdn-icons-png.flaticon.com/512/153/153786.png">
@@ -26,15 +37,35 @@
     </head>
 
     <body>
+        <div class="project-card-div" id="project-card-div">
+            <div class="project-card" id="project-card">
+                <div class="lower-card">
+                    <div class="lower-card2"><div><h1 class="project-card-text" id="project-card-title">procedurally generated terrain</h1></div><div class="language2"><h1 class="language-text2">luau</h1></div></div>
+                    <h1 class="project-card-mini-text">roblox studio project • 2025</h1>
+                </div>
+                <div class="box-card">
+                    <img class="box-card-img" id="box-card-img" src="terrain.png">
+                    <h1 class="box-card-text" id="project-card-text">This project procedurally generates chunks of terrain around the player locally, utilizing a server-based perlin noise calculation; it actively adds and removes chunks when the player moves, taking measures to reduce lag. This randomizes occurences in terrain (i.e. trees, water) based on y height. </h1>
+                </div>
+            </div>
+        </div>
         <div class="group" id="banner">
             <h1 class="second" id="second">|</h1>
             <h1 class="head" id="head"></h1><h1 class="blinking" id="blinking">|</h1>
         </div>
-        <h1 class="desc" id="desc"><b>Hello!</b> I am an experienced developer with years of general experience; this includes luau as well as a variety of other languages. I have programmed a variety of systems in roblox, and am always willing to grow with new, unique projects!<br><br>I am still a novice at roblox development, and currently, I am aiming to grow my portfolio.</h1>
+        <div class="available-div">
+            <div class="available"><div class="dot"></div><h1 class="available-text">accepting scripting commissions</h1></div>
+        </div>
+        <div class="head-desc">
+            <h1 class="desc" id="desc">Hello! I am an experienced developer with years of general experience; this includes <span class="desc-effect">roblox development with luau</span> as well as a variety of other languages. I have programmed a variety of systems in roblox, as shown below, and am always willing to grow with new, unique projects!<br><br>I am still a novice at roblox development, and currently, I am aiming to grow my portfolio. Feel free to contact me <span class="desc-effect-2">@huckfil</span> on discord with scripting commissions!</h1>
+        </div>
+        
         <div class="down-div">
+            <div class="line-break"></div>
             <div id="down-img-div" class="down-img-div">
                 <img src="https://cdn-icons-png.freepik.com/512/2989/2989989.png" class="down-img"></img>
             </div>
+            <div class="line-break-2"></div>
         </div>
         <!-- <div class="about-div">
             <br id="about" class="separator">
@@ -48,21 +79,33 @@
         <div class="experience-div">
             <br id="experience" class="separator">
             <div class="experience-div-2">
-                <h1 class="header-experience">experience</h1>
+                <h1 class="header-experience" id="pastprojects">past projects</h1>
             </div>
             <div class="experience-div-3">
-                <h1 class="experience1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet, turpis non vehicula ornare, urna lectus finibus dui, fermentum porttitor tellus tortor vel neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum eu eros purus.</h1>
+                <h1 class="experience1">These are a selection of projects I have done in roblox. I have with a plethora of systems and mechanics, <span class="desc-effect">from a simulator game</span>, <span class="desc-effect">to a lobby system</span>, <span class="desc-effect">to a combat system</span>, <span class="desc-effect">to terrain generation</span>. I am actively growing my portfolio!</h1>
             </div>
             <br id="experience" class="separator">
             <div class="experience-boxes">
-                <div class="box-1"></div>
-                <div class="box-1"></div>
-                <div class="box-1"></div>
-                <div class="box-1"></div>
-                <div class="box-1"></div>
-                <div class="box-1"></div>
-                <div class="box-1"></div>
-                <div class="box-1"></div>
+                <div class="div-box-1"><div id="box-1" class="box-1"><div class="below-box-1"><h1 class="box-1-text">class system</h1><div class="language"><h1 class="language-text">luau</h1></div></div></div></div>
+                <div class="div-box-1"><div id="box-2" class="box-1"><div class="below-box-1"><h1 class="box-1-text">lobby system</h1><div class="language"><h1 class="language-text">luau</h1></div></div></div></div>
+                <div class="div-box-1"><div id="box-3" class="box-1"><div class="below-box-1"><h1 class="box-1-text">combat system</h1><div class="language"><h1 class="language-text">luau</h1></div></div></div></div>
+                <div class="div-box-1"><div id="box-4" class="box-1"><div class="below-box-1"><h1 class="box-1-text">inventory system</h1><div class="language"><h1 class="language-text">luau</h1></div></div></div></div>
+                <div class="div-box-1"><div id="box-5" class="box-1"><div class="below-box-1"><h1 class="box-1-text">effects & ui</h1><div class="language"><h1 class="language-text">luau</h1></div></div></div></div>
+                <div class="div-box-1"><div id="box-6" class="box-1"><div class="below-box-1"><h1 class="box-1-text">simulator game</h1><div class="language"><h1 class="language-text">luau</h1></div></div></div></div>
+                <div class="div-box-1"><div id="box-7" class="box-1"><div class="below-box-1"><h1 class="box-1-text" id="box-7-text">procedurally generated terrain</h1><div class="language"><h1 class="language-text">luau</h1></div></div></div></div>
+                <div class="div-box-1"><div id="box-8" class="box-1"><div class="below-box-1"><h1 class="box-1-text">item pick up system</h1><div class="language"><h1 class="language-text">luau</h1></div></div></div></div>
+                <div class="div-box-1"><div id="box-9" class="box-1"><div class="below-box-1"><h1 class="box-1-text">enemy lock on system</h1><div class="language"><h1 class="language-text">luau</h1></div></div></div></div>
+                <div class="div-box-1"><div id="box-10" class="box-1"><div class="below-box-1"><h1 class="box-1-text">3D ui</h1><div class="language"><h1 class="language-text">luau</h1></div></div></div></div>
+            </div>
+            <div class="experience-div-3" style="margin-top:3em;">
+                <h1 class="experience1" style="width:inherit"><span class="desc-effect">and more...</span></h1>
+            </div>
+            <div class="down-div">
+                <div class="line-break"></div>
+                <div id="down-img-div-2" class="down-img-div">
+                    <img src="https://cdn-icons-png.freepik.com/512/2989/2989989.png" class="down-img"></img>
+                </div>
+                <div class="line-break-2"></div>
             </div>
         </div>
         <!-- <div class="certificates-div">
@@ -79,11 +122,21 @@
     <footer>
         <div class="info">
             <br id="footer" class="separator">
-            <h1 class="info-h1">get in touch with me</h1>
-            <div class="info-img-div">
-                <a href="https://github.com/rye317"><img class="info-img" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"></a>
-                <a href="https://github.com/rye317"><img class="info-img-2" src="https://shared-files.whatpulse.org/app_logos/discord.png"></a>
-                <h1 class="info-img-2-text">@huckfil</h1>
+            <h1 class="info-h1" id="contact">get in touch with me</h1>
+            <div class="contacts">
+                <a href="https://www.roblox.com/users/575883038/profile" style="text-decoration: none;"><div class="info-img-div" id="info-img-div">
+                    <img class="info-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Roblox_Corporation_2025_logo.svg/960px-Roblox_Corporation_2025_logo.svg.png">
+                    <h1 class="info-img-text" id="info-img-text">@Raxy630</h1>
+                </div></a>
+                <div class="info-img-div">
+                    <!-- <a href="https://github.com/rye317"><img class="info-img" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"></a> -->
+                    <img class="info-img" src="https://shared-files.whatpulse.org/app_logos/discord.png">
+                    <h1 class="info-img-text" id="info-img-2-text">@huckfil</h1>
+                </div>
+                <a href="https://github.com/rye317" style="text-decoration: none;"><div class="info-img-div">
+                    <img class="info-img" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png">
+                    <h1 class="info-img-text" id="info-img-3-text">@rye317</h1>
+                </div></a>
             </div>
             <h2 class="info-h2"></h2>
         </div>
@@ -113,20 +166,19 @@
         }
     }
 
-    document.addEventListener('mousemove', function(mouse) {
+    document.addEventListener('mousemove', function(event) {
         var light = document.getElementById("light");
         var left = event.clientX - (light.offsetWidth/2);
         var top = event.clientY - (light.offsetHeight/2);
         var leftOffset = 100;
         var topOffset = 100;
         if (event.clientX > leftOffset && event.clientX < (window.innerWidth-leftOffset)) {
-            light.style.left = left;
+            light.style.left = left + "px";
         }
         if (event.clientY > topOffset && event.clientY < (window.innerHeight-topOffset)) {
-            light.style.top = top;
+            light.style.top = top + "px";
         }
     })
-
 
     console.log(blink);
 
@@ -139,14 +191,21 @@
     function downarrowbounce() {
         if (shouldgodown) {
             var downarrowdiv = document.getElementById("down-img-div");
+            var downarrowdiv2 = document.getElementById("down-img-div-2");
             downarrowdiv.style.marginTop = "1em";
+            downarrowdiv2.style.marginTop = "1em";
             setTimeout(() => {
                 downarrowdiv.style.marginTop = "0em";
-            }, 1500)
+                downarrowdiv2.style.marginTop = "0em";
+            }, 800)
+            setTimeout(() => {
+                downarrowdiv.style.marginTop = "-1em";
+                downarrowdiv2.style.marginTop = "-1em";
+            }, 800)
         }
     }
 
-    const downarrowbounceInterval = setInterval(downarrowbounce, 3000);
+    const downarrowbounceInterval = setInterval(downarrowbounce, 2000);
 
     var shouldblink = true;
 
@@ -280,6 +339,49 @@
         return rgbToHex(r, g, b);
     }
 
+    var cardtimer = 0
+
+    var boxes = [
+        ["class system","class.png","This project is a custom class selection menu that allows the user to choose a class via visible rigs.<br><br>The screen shifts towards where the mouse moves, and the rigs highlight when the mouse hovers over them. In additon to this, there is a tweened popup gui that displays information on the class and allows the selection of the class.<br><br>I also worked on custom abilities for each class. This mainly involves unique systems to cast/use abilities and vfx."],
+        ["lobby system","lobby.png","This project is a fully working lobby system fully in a gui, which allows users to create lobbies, join other lobbies, leave lobbies, etc."],
+        ["combat system","combat.png","This project is a working combat system and boss system.<br><br>This system allows for movesets to change based on held item/skill, which is integrated into my inventory system. In addition to this, the system allows for chained attacks and combos against enemies. The swings also have hitboxes to detect what enemies are hit.<br><br>I also created a boss to test the combat system on. The boss has simple AI pathfinding to follow and attack me. We both can damage eachother."],
+        ["inventory system","inventory.png","This project is a custom inventory system.<br><br>It allows for tools and skills to be equipped and used. I have also integrated it into a few other systems."],
+        ["effects & ui","effects.png","This generally encompasses my effect and ui work.<br><br>Shown in the picture is my grimoire system which allows the user to open and close a grimoire which is by their side. This features an opening animation. Apart from this, I have done a ton of work related to vfx, graphics, and ui."],
+        ["simulator game","simulator.png","This is a small farming simulator game I made to learn basic mechanics in roblox studio.<br><br>This mainly includes a monetary system, an upgrade system, and working ui/guis."],
+        ["procedurally generated terrain","terrain.png","This project procedurally generates chunks of terrain around the player locally, utilizing a server-based perlin noise calculation; it actively adds and removes chunks when the player moves, taking measures to reduce lag. This randomizes occurences in terrain (i.e. trees, water) based on y height."],
+        ["item pickup system","pickup.png","This project is a framework for pickupable items.<br><br>It prompts the user with a pickup ui when they get within a certain proximity of the pickupable item. Items that are picked up show up in the bottom right and stack. So multiple picked up items will stack on top of eachother and fall down as the ui's transition out.<br><br>These items are added to the player's inventory via my inventory system."],
+        ["enemy lockon system","lockon.png","This project allows the user to lock on to enemies.<br><br>This forces the player's camera to look at the nearest enemy, allowing for easier combat."],
+        ["3D ui","3dui.png","This project is a 3D ui/gui that allows.<br><br>This acts as a regular gui, but appears skewed as if it is 3D instead of 2D. I have used this for a variety of guis involving health, items, and main screen guis."]
+    ]
+
+    document.addEventListener("click", (event) => {
+        if (Date.now()-cardtimer>=500) { 
+            cardtimer = Date.now()
+            var added = false
+            for (let i = 1; i <= 10; i++) {
+                const div = document.getElementById('box-'+i)
+                if (event.target == div) {
+                    added = true
+                    document.getElementById('project-card-div').style.visibility = "visible"
+                    document.getElementById('project-card-div').style.opacity = 1
+                    document.getElementById('project-card-title').textContent = boxes[i-1][0]
+                    document.getElementById('project-card-text').innerHTML = boxes[i-1][2]
+                    document.getElementById('box-card-img').src = boxes[i-1][1]
+                    document.body.classList.add("no-scroll");
+                    document.body.classList.add("blur")
+                }
+            }
+            if (!added && document.getElementById('project-card-div').style.visibility == "visible" && event.target != document.getElementById('project-card')) {
+                document.getElementById('project-card-div').style.opacity = 0
+                setTimeout(() => {
+                    document.getElementById('project-card-div').style.visibility = "hidden"
+                },500)
+                document.body.classList.remove("no-scroll");
+                document.body.classList.remove("blur")
+            }
+        }
+    })
+
     spotlight();
 
     </script>
@@ -289,19 +391,282 @@
     * {
         font-family: 'Times New Roman', Times, serif;
         color: white;
-        overflow-x: hidden;
         scroll-behavior: smooth;
         scrollbar-width: none;
+    }
+
+    .line-break-div {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5em;
+    }
+
+    .line-break {
+        width: 8em;
+        height: 0.1em;
+        background: linear-gradient(to right, transparent 0%, white 100%); 
+    }
+
+    .line-break-2 {
+        width: 8em;
+        height: 0.1em;
+        background: linear-gradient(to left, transparent 0%, white 100%); 
+    }
+
+    .no-scroll {
+        overflow-y: hidden;
+    }
+
+    .project-card-div {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s;
+        background-color: black
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 30%;
+        /* --bg-image: url("terrain.png");
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 25%, rgba(0,0,0,1) 55%, rgba(0,0,0,1) 100%),var(--bg-image); */
+        /* border: 0.1em #474747 solid; */
+    }
+
+    .language2 {
+        text-align: center;
+        margin-left: 0.5em;
+        border-radius: 0.75em;
+        width: 3em;
+        height: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #151615;
+        border: 0.1em #474747 solid;
+        overflow: visible;
+    }
+
+    .language-text2 {
+        color:#03B67F;
+        font-family: 'IBM Plex Sans';
+        font-size: 0.85em;
+    }
+
+    .project-card-text {
+        width: 100%;
+        font-family: 'IBM Plex Sans';
+        font-size: 1.5em;
+        font-weight: 500;
+        color: #959595;
+        margin-left: 0.6em;
+    }
+
+    .project-card-mini-text {
+        width: 100%;
+        font-family: 'JetBrains Mono';
+        font-size: 0.75em;
+        font-weight: 500;
+        color: #959595;
+        margin-left: 1.2em;
+    }
+
+    .lower-card {
+        width: 90%;
+        height: 4em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lower-card2 {
+        width: 100%;
+        height: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .box-card-img {
+        max-width: 50%;
+        margin-left: 1em;
+    }
+
+    .box-card {
+        width: 100%;
+        height: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .box-card-text {
+        width: 95%;
+        font-family: 'IBM Plex Sans';
+        color: #959595;
+        font-size: 1.05em;
+        line-height: 1.75em;
+        font-weight: 300;
+        margin-left: 1em;
+    }
+
+    .available-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+    }
+
+    .available {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1em;
+        width: 19em;
+        background-color: #000;
+        border: 0.1em #474747 solid;
+        overflow: visible;
+    }
+
+    .dot {
+        width: 0.75em;
+        height: 0.75em;
+        background-color: #03B67F;
+        border-radius: 1em;
+        margin-right: 0.25em;
+    }
+
+    .available-text {
+        color:#03B67F;
+        font-family: 'JetBrains Mono';
+        font-size: 0.85em;
+    }
+
+    .fl-div {
+        position: fixed;
+        display: flex;
+        top: 0.75em;
+        left: 0.75em;
+        gap: 0.5em;
+        flex-direction: column;
+    }
+
+    .fl {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 7em;
+        height: 4em;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        border-radius: 1em;
+        box-shadow: 0 0 0 5px rgb(0,0,0,.05);
+        border: 0.1em #474747 solid;
+    }
+
+    #fl-1 {
+        width: 4.5em;
+        height: 2.5em;
+    }
+
+    #fl-2 {
+        width: 9.5em;
+        height: 2em;
+    }
+
+    #fl-3 {
+        width: 7.75em;
+        height: 2em;
+    }
+
+    .fl-text-hashtag {
+        font-size: 1.15em;
+        margin-left: 0.25em;
+    }
+
+    #fl-text-1 {
+        font-weight: 1000;
+        font-size: 1.15em;
+    }
+
+    #fl-text-2 {
+        color: #474747;
+    }
+
+    #fl-text-3 {
+        color: #474747;
+    }
+    
+    .fl-a {
+        text-decoration: none;
+    }
+
+    .fl-text {
+        font-weight: 15;
+        font-family: 'JetBrains Mono';
+        font-size: 1em;
+        margin-left: 0.5em;
     }
 
     .head {
         opacity: 1;
         transition: opacity 0.2s ease-in-out;
+        font-size: 1.15em;
+        font-family: 'IBM Plex Sans';
+    }
+
+    .blinking {
+        font-size: 1.15em;
+        font-family: 'IBM Plex Sans';
+    }
+
+    .head-desc {
+        display: flex;
+        justify-content: center;
     }
 
     .desc {
         opacity: 1;
         transition: opacity 0.2s ease-in-out;
+        font-size: 1.25em;
+        line-height: 1.75em;
+        font-family: 'IBM Plex Sans';
+        font-weight: 300;
+        width: 35%;
+        color: #959595
+    }
+
+    .desc-effect {
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        background-color: #03B67F;
+        border-radius: 0.1em;
+        color: #000;
+        font-weight: 900;
+        font-family: 'JetBrains Mono';
+        font-size: 0.8em;
+    }
+
+    .desc-effect-2 {
+        font-family: 'IBM Plex Sans';
+        font-weight: 500;
+        font-size: 0.9em;
+        color: #94A8FF;
+        background-color: #23274B;
+        border-radius: 0.1em;
     }
 
     .second {
@@ -313,25 +678,6 @@
 
     html {
         background-color: black;
-    }
-
-    .fl {
-        padding-left: 15px;
-        padding-right: 15px;
-        top: 15px;
-        left: 15px;
-        width: 100px;
-        background-color: black;
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 1em;
-        box-shadow: 0 0 0 5px rgb(0,0,0,.05);
-    }
-
-    .fl-text {
-        font-weight: 25;
     }
 
     .fi {
@@ -410,7 +756,8 @@
     }
 
     .header-experience {
-        font-size: 65px;
+        font-size: 2.5em;
+        font-family: 'IBM Plex Sans';
     }
 
     .experience-div-3 {
@@ -424,20 +771,183 @@
         display: flex;
         flex-wrap: wrap;
         gap: 3.5em;
-        max-width: 50em;
+        max-width: 75em;
+        height: 54.5em;
+        overflow: visible;
         justify-content: center;
     }
 
+    .div-box-1 {
+        overflow: visible;
+        height: 11em;
+        width: 20em;
+    }
+
+    .box-1-text {
+        font-family: 'IBM Plex Sans';
+        font-size: 1em;
+        font-weight: 500;
+        color: #959595;
+    }
+
+    #box-7-text {
+        font-size: 0.8em;
+    }
+
+    .below-box-1 {
+        display: flex;
+        height: 2em;
+        align-items: center;
+        overflow: visible;
+    }
+
+    .language {
+        text-align: center;
+        margin-left: 0.5em;
+        border-radius: 0.75em;
+        width: 2.25em;
+        height: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        border: 0.1em #474747 solid;
+        overflow: visible;
+    }
+
+    .language-text {
+        color:#03B67F;
+        font-family: 'JetBrains Mono';
+        font-size: 0.75em;
+    }
+    
     .box-1 {
-        width: 10em;
-        height: 10em;
-        background-color: white;
-        border-radius: 1em;
+        width: 20em;
+        height: 12em;
+        /* border-radius: 0.25em; */
+        /* border: 0.1em #474747 solid; */
+        transition: border 0.5s;
+        display: flex;
+        align-items: flex-end;
+        overflow: visible;
+        /* box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.7); */
+        /* box-shadow: 0 0 1em #aaa; */
+        position: relative;
+        cursor: pointer;
+    }
+
+    .box-1:hover {
+        /* border: 0.1em #d1d1d1 solid; */
+    }
+
+    #box-1::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('class.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 65%,rgba(0,0,0,0) 85%,rgba(0,0,0,0) 100%);
+    }
+
+    #box-2::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('lobby.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 65%,rgba(0,0,0,0) 85%,rgba(0,0,0,0) 100%);
+    }
+
+    #box-3::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('combat.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 65%,rgba(0,0,0,0) 85%,rgba(0,0,0,0) 100%);
+    }
+
+
+    #box-4::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('inventory.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 65%,rgba(0,0,0,0) 85%,rgba(0,0,0,0) 100%);
+    }
+
+    #box-5::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('effects.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 65%,rgba(0,0,0,0) 85%,rgba(0,0,0,0) 100%);
+    }
+
+    #box-6::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('simulator.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 65%,rgba(0,0,0,0) 85%,rgba(0,0,0,0) 100%);
+    }
+
+    #box-7::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('terrain.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 65%,rgba(0,0,0,0) 85%,rgba(0,0,0,0) 100%);
+    }
+
+    #box-8::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('pickup.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 65%,rgba(0,0,0,0) 85%,rgba(0,0,0,0) 100%);
+    }
+
+    #box-9::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('lockon.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 65%,rgba(0,0,0,0) 85%,rgba(0,0,0,0) 100%);
+    }
+
+    #box-10::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('3dui.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 65%,rgba(0,0,0,0) 85%,rgba(0,0,0,0) 100%);
     }
 
     .experience1 {
-        font-weight: 25;
-        width: 50%;
+        font-size: 1.25em;
+        line-height: 1.75em;
+        font-family: 'IBM Plex Sans';
+        font-weight: 300;
+        width: 35%;
+        color: #959595
     }
 
     .certificates-div {
@@ -464,29 +974,31 @@
     }
 
     .down-div {
-        margin-top: 95px;
+        margin-top: 7em;
         display: flex;
         width: 100%;
         height: 4em;
         left: 0;
         justify-content: center;
-        align-items: top;
+        align-items: center;
     }
 
     .down-img-div {
-        transition: margin-top 1.5s ease-in-out;
+        transition: margin-top 1s ease-in-out;
         display: flex;
         background-color: #EBE8E2;
-        width: 3em;
-        height: 3em;
+        width: 2em;
+        height: 2em;
         justify-content: center;
         align-items: center;
         border-radius: 50%;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
     }
 
     .down-img {
         background-color: transparent;
-        width: 2.5em;
+        width: 1.5em;
         /* filter: invert(100%); */
     }
 
@@ -503,8 +1015,10 @@
     }
 
     .info-h1 {
-        font-weight: 50;
-        font-size: 25;
+        font-weight: 450;
+        font-size: 1.25em;
+        font-family: 'IBM Plex Sans';
+        color: #959595;
     }
 
     .info-h2 {
@@ -512,26 +1026,52 @@
         color: gray;
     }
 
+    .contacts {
+        display: flex;
+        gap: 0.5em;
+    }
+
     .info-img-div {
         display: flex;
         gap: 0.5em;
         justify-content: center;
         align-items: center;
+        border-radius: 0.75em;
+        width: 7.25em;
+        height: 1.75em;
+        background-color: #000;
+        border: 0.1em #474747 solid;
+        overflow: visible;
+    }
+
+    #info-img-div {
+        width: 8em;
     }
 
     .info-img {
-        max-width: 2.5em;
-        margin-right: 1em;
+        max-height: 1.15em;
     }
 
-    .info-img-2 {
-        max-width: 2.5em;
-    }
-
-    .info-img-2-text {
-        font-size: 20;
+    .info-img-text {
+        font-size: 1em;
         color: #94A8FF;
         background-color: #23274B;
+        font-family: 'Inter';
+    }
+
+    #info-img-text {
+        color: #2D55FF;
+        background-color: #0b184d;
+    }
+
+    #info-img-2-text {
+        color: #5764F1;
+        background-color: #16193d;
+    }
+
+    #info-img-3-text {
+        color: white;
+        background-color: #262626;
     }
 
     body {
@@ -554,12 +1094,6 @@
     .btn:hover, a:focus, a:active {
         cursor: pointer;
         background-size: 100% 0.1em;
-    }
-
-    .desc {
-        padding-left: 10.5em;
-        width: 55%;
-        font-weight: 65;
     }
 
     .bannerdiv {
